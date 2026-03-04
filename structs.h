@@ -12,9 +12,11 @@ enum Direction {
     DOWN
 };
 
+float defaultHeight = 31.0f, defaultWidth = 21.0f;
+
 struct Collider{
     mlib::Vec2 P1 = {0.0f,0.0f};
-    mlib::Vec2 P2 = {20.0f ,20.0f};
+    mlib::Vec2 P2 = {defaultWidth, defaultHeight};
 };
 
 // Structure composed by the values needed to manage

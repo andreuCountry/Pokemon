@@ -5,12 +5,11 @@
 #include "../structs.h"
 
 // Sprites cargados
-SpriteSheet ss_rocket;
-SpriteSheet ss_rocket_trail;
-SpriteSheet ss_astronaut;
-SpriteSheet ss_collectibles;
-SpriteSheet ss_enemies;
-SpriteSheet ss_explosion;
+SpriteSheet ss_battle;
+SpriteSheet ss_boxbg;
+SpriteSheet ss_pokeball;
+SpriteSheet ss_red;
+SpriteSheet ss_tiles;
 
 bool visible_colliders = false;
 
@@ -24,12 +23,11 @@ void LoadSpriteSheet(const char *path, SpriteSheet *ss, int sprite_w = 20, int s
 }
 
 void LoadSpriteSheets(){
-    LoadSpriteSheet("./assets/sprites/rockets.png", &ss_rocket);
-    LoadSpriteSheet("./assets/sprites/rocket-trail.png", &ss_rocket_trail);
-    LoadSpriteSheet("./assets/sprites/astronaut.png", &ss_astronaut,48,72);
-    LoadSpriteSheet("./assets/sprites/collectibles.png", &ss_collectibles);
-    LoadSpriteSheet("./assets/sprites/enemies.png", &ss_enemies);
-    LoadSpriteSheet("./assets/sprites/explosion.png", &ss_explosion,72,48);
+    LoadSpriteSheet("./assets/battle.png", &ss_battle);
+    LoadSpriteSheet("./assets/boxbg.png", &ss_boxbg);
+    LoadSpriteSheet("./assets/pokeball.png", &ss_pokeball,48,72);
+    LoadSpriteSheet("./assets/red.png", &ss_red);
+    LoadSpriteSheet("./assets/tiles.png", &ss_tiles);
 }
 
 void ReleaseSpriteSheet(SpriteSheet *ss){
@@ -37,12 +35,11 @@ void ReleaseSpriteSheet(SpriteSheet *ss){
 }
 
 void ReleaseSpriteSheets(){
-    ReleaseSpriteSheet(&ss_rocket);
-    ReleaseSpriteSheet(&ss_rocket_trail);
-    ReleaseSpriteSheet(&ss_astronaut);
-    ReleaseSpriteSheet(&ss_collectibles);
-    ReleaseSpriteSheet(&ss_enemies);
-    ReleaseSpriteSheet(&ss_explosion);
+    ReleaseSpriteSheet(&ss_battle);
+    ReleaseSpriteSheet(&ss_boxbg);
+    ReleaseSpriteSheet(&ss_pokeball);
+    ReleaseSpriteSheet(&ss_red);
+    ReleaseSpriteSheet(&ss_tiles);
 }
 
 void ReleaseSprite(Sprite *s){
