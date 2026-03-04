@@ -9,7 +9,7 @@
 double current_time, last_time;
 int fps = 60;
 
-float windowX = 1200.0f, windowY = 1200.0f;
+float windowX = 1200.0f, windowY = 800.0f;
 
 int esat::main(int argc, char **argv) {
     esat::WindowInit(windowX, windowY);
