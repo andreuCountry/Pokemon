@@ -1,0 +1,80 @@
+# =========================
+# Archivos compilados
+# =========================
+*.o
+*.obj
+*.lo
+*.la
+*.al
+*.libs
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+*.exe
+*.out
+*.app
+
+# =========================
+# Archivos precompilados
+# =========================
+*.gch
+*.pch
+
+# =========================
+# Archivos de dependencias
+# =========================
+*.d
+*.dep
+
+# =========================
+# Archivos generados por CMake
+# =========================
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# =========================
+# Archivos generados por Make
+# =========================
+*.make
+*.mk
+
+# =========================
+# Archivos de cobertura
+# =========================
+*.gcno
+*.gcda
+*.gcov
+
+# =========================
+# Directorios de build
+# =========================
+build/
+bin/
+obj/
+out/
+dist/
+
+# =========================
+# Archivos temporales
+# =========================
+*.tmp
+*.temp
+*.log
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# =========================
+# Archivos de IDE
+# =========================
+.vscode/
+.idea/
+*.code-workspace
