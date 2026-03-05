@@ -12,7 +12,14 @@ enum Direction {
     DOWN
 };
 
-float defaultHeight = 31.0f, defaultWidth = 21.0f;
+enum GameScenes {
+    MAP_1,
+    MAP_2,
+    BILL_CAGE  
+};
+
+extern float defaultHeight;
+extern float defaultWidth;
 
 struct Collider{
     mlib::Vec2 P1 = {0.0f,0.0f};
@@ -40,6 +47,18 @@ struct Sprite{
     unsigned char ss_row = 0, ss_col = 0;
     bool isVisible;
     bool isActive; //isActive indica si está dispuesto a comprobar colisiones
+};
+
+struct Cell {
+    esat::SpriteHandle image;
+    int number;
+    Collider collider;
+};
+
+struct Pokemon {
+    int info;
+    Pokemon *prox;
+    Pokemon *ante;
 };
 
 #endif
