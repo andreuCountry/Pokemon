@@ -8,9 +8,9 @@ Pokemon* CrearLista() {
     return lista;
 }
 
-void InsertarPokemon(Pokemon** lista, int valor) {
+void InsertarPokemon(Pokemon** lista, PokemonNames name) {
     Pokemon* newLista = (Pokemon*) malloc(1*sizeof(Pokemon));
-    newLista->info = valor;
+    newLista->info = name;
     newLista->prox = *lista;
     newLista->ante = nullptr;
 

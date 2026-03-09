@@ -12,6 +12,30 @@ enum Direction {
     DOWN
 };
 
+enum PokemonTypes {
+    FIRE,
+    WATER,
+    BOLT,
+    WEED,
+    EARTH,
+    WIND,
+    POISONOUS
+};
+
+enum PokemonNames {
+    ARCANINE,
+    TORCHIC,
+    BULBASAUR,
+    PIKACHU,
+    GEODUDE,
+    ONIX,
+    PIDGEOT,
+    SQUIRTLE,
+    EKANS,
+    ARBOK,
+    TOTAL_POKEMON = 10
+};
+
 enum GameScenes {
     MAP_1,
     MAP_2,
@@ -56,9 +80,16 @@ struct Cell {
 };
 
 struct Pokemon {
-    int info;
+    PokemonNames info;
+    esat::SpriteHandle image;
+    PokemonTypes type;
     Pokemon *prox;
     Pokemon *ante;
+};
+
+struct GameState {
+    Pokemon* pokemonList;
+    Pokemon* currentPokemon;
 };
 
 #endif
