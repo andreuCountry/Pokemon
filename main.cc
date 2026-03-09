@@ -67,9 +67,15 @@ void InitSprites() {
 }
 
 void InitialConfig(Pokemon* pokemons) {
+    // empezamos en la pokedex, esto se cambia despues
     scene = BILL_CAGE;
+
+    // inicializar pokemon de enlace
     game.currentPokemon = pokemons + 0;
 
+    // la fuente para los textos de todo
+    esat::DrawSetTextFont("./assets/pokemon.ttf");
+    esat::DrawSetTextSize(10.0f);
 }
 
 Pokemon* InitiateMemoryForPokemons() {
@@ -177,7 +183,7 @@ void ControlsDetectBox(Pokemon* pokemonData) {
 }
 
 void DrawPokemonInfo(Pokemon* pokemonInfo) {
-
+    esat::DrawText(windowX / 2, 500, "Game over");
 }
 
 void DrawInstancePokemons() {
